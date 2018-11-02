@@ -14,7 +14,7 @@ const eosJS = Eos({
   chainId: process.env.CHAIN_ID
 });
 
-cron.schedule('* * * * *', () => {
+cron.schedule('*/5 * * * *', () => {
   axios
     .get('https://api.bitfinex.com/v2/ticker/' + process.env.PAIR)
     .then((response: any) => {

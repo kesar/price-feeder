@@ -33,7 +33,7 @@ cron.schedule('*/5 * * * *', () => {
               quote: pair + ' ' + process.env.QUOTE,
               exchange: process.env.EXCHANGE,
               volume: 0,
-              timeframe: 60
+              timeframe: 300
             },
             name: 'addquote'
           }
